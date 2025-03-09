@@ -43,6 +43,11 @@ const TagSchema = z.object({
     item_id: z.string(),
 })
 
+const DomainMetadataSchema = z.object({
+    name: z.string(),
+    logo: z.string().optional(),
+})
+
 const UnixTimestampSchema = z.preprocess(value => Number(value), z.number().int())
 
 // add
@@ -229,6 +234,8 @@ export const RetrieveSchema = z.object({
                 time_added: UnixTimestampSchema,
                 /** The date the item was updated */
                 time_updated: UnixTimestampSchema,
+                /** Information about the domain */
+                domain_metadata: DomainMetadataSchema.optional(),
             }),
             z.object({
                 /** A unique identifier matching the saved item. This id must be used to perform any actions through the `v3/modify` endpoint. */
