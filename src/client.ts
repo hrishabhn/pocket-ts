@@ -32,13 +32,7 @@ export class PocketClient {
                 access_token: this.access_token,
                 ...body,
             }),
-        })
-            .then(res => {
-                console.log(this.consumer_key)
-                console.log('res', res)
-                return res
-            })
-            .then(res => res.json())
+        }).then(res => res.json())
 
     // auth
     private readonly redirect_uri: string
