@@ -16,7 +16,7 @@ export type Authorize = z.infer<typeof AuthorizeSchema>
 const AuthorSchema = z.object({
     author_id: z.string(),
     name: z.string(),
-    url: z.string(),
+    url: z.string().nullable(),
 })
 
 const ImageSchema = z.object({
