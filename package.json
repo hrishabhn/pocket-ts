@@ -1,6 +1,12 @@
 {
     "name": "pocket-ts",
     "license": "MIT",
+    "version": "0.0.1",
+    "homepage": "https://github.com/hrishabhn/pocket-ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hrishabhn/pocket-ts"
+    },
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
