@@ -12,6 +12,7 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsup src/index.ts --format cjs,esm --dts",
+        "prepare": "npm run build",
         "lint": "eslint src --ext .ts"
     },
     "devDependencies": {
